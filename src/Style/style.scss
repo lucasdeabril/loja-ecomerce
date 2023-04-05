@@ -4,7 +4,7 @@
 }
 @mixin display($flex,$row){
     display:$flex;
-    flex-direction: $row;
+    flex-direction:$row;
     // flex-wrap: wrap;
 }
 @mixin transform($x,$y){
@@ -17,7 +17,7 @@ $cor-laranja: #FF6500;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    color: white;
+    // color: white;
     font-family: sans-serif;
 }
 body{
@@ -30,6 +30,8 @@ body{
     height: 100%;
 }
 nav{
+
+    
     margin-top: 1.5rem;
     display: flex;
     grid-template-columns: 1rem 4rem 4rem 1rem 1rem 1rem 1rem;
@@ -49,6 +51,9 @@ nav{
         width: fit-content;
         height: fit-content;
         // background-color: red;
+        p{
+            color:white;
+        }
     }
     #logo{
         @include tamanho(13rem,"" )
@@ -72,6 +77,7 @@ ul{
     justify-content: center;
     align-items: center;
     li{
+        color: white;
         display: flex;
         margin: 1.9rem;
         width: fit-content;
@@ -85,4 +91,22 @@ ul{
     @include display(flex, column );
     margin-top: 6rem;
     background-color: $cor-laranja;
+    padding-top: 3rem;
+    .produtos{
+        
+        background-color: white;
+        @include display(flex, row  );
+        flex-wrap: wrap;
+        @include tamanho(100%, 100%);
+        input{
+            @include tamanho(0.7rem, 0.7rem )
+        }
+        img{
+            width: 10rem;
+        }
+        .itens{
+            margin-right: 2rem;
+            
+        }
+    }
 }
