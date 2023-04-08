@@ -3,9 +3,9 @@
 export function filtrofav(e , i){
     let parentEl = e.closest('div');
     let divfav = document.querySelectorAll('.divfav')
-    let imagemfilho = parentEl.querySelector('img')
+    
     // let container=document.querySelector('.container')
-    console.log(imagemfilho)
+    // console.log(imagemfilho)
     
     let indice = i
     for (let i = 0; i< divfav.length; i++){
@@ -13,10 +13,10 @@ export function filtrofav(e , i){
         let nome = imagem.name
         
         if (parentEl.id == divfav[i].id){
-            console.log('gus')
+            // console.log('gus')
             
             indice ++
-            console.log(indice)
+            // console.log(indice)
            
             if (indice >=3){
                 let ultimoI= divfav[divfav.length -1]
