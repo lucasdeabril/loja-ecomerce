@@ -13,6 +13,9 @@
 $cor-azul: rgb(0,96,177);
 $cor-laranja: #FF6500;
 
+.hide{
+    display: none;
+}
 *{
     padding: 0px;
     margin: 0px;
@@ -102,11 +105,14 @@ ul{
             @include tamanho(0.7rem, 0.7rem )
         }
         img{
-            width: 10rem;
+            @include tamanho(6rem,6rem );
         }
         .itens{
             margin-right: 2rem;
             
         }
+    }
+    img{
+        @include tamanho(6rem,6rem )
     }
 }
