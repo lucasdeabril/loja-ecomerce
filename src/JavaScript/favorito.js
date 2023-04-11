@@ -17,6 +17,7 @@ export function favoritar(e){
     let foto = document.createElement('img')
     let p1 = document.createElement('p')
     let p2 = document.createElement('p')
+    let p3 = document.createElement('p')
     let input = document.createElement('input')
     input.type='button'
     cont.classList.add('divfav')
@@ -28,6 +29,7 @@ export function favoritar(e){
     cont.appendChild(foto)
     cont.appendChild(p1)
     cont.appendChild(p2)
+    cont.appendChild(p3)
     cont.appendChild(input)
     destino.appendChild(cont)
 

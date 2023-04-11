@@ -33,6 +33,7 @@ addEventListener('click', (e)=>{
     if(targetEl.classList.contains('addcarrinho')){
         let c = addcarrinho(targetEl)
         let f = filtrocar(targetEl)
+        let s = subtotal(targetEl)
     }
     if(targetEl.classList.contains('removeritm')){
         let r = remover_item_carrinho(targetEl)
