@@ -12,3 +12,9 @@ export function remove (e, i){
         }
     }
 }
+
+export function remover_item_carrinho (e){
+    let parent = e.closest('.itemcar')
+    parent.remove()
+    console.log(parent)
+}

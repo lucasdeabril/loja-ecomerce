@@ -107,4 +107,45 @@ ul li {
 .container img {
   width: 6rem;
   height: 6rem;
+}
+
+.carrinho {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 27rem;
+  background-color: white;
+}
+.carrinho .containeritm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.carrinho .containeritm .itemcar {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+}
+.carrinho .containeritm .itemcar .imgitm {
+  width: 5rem;
+  height: 5rem;
+  transform: translate(0px, -1.5rem);
+}
+.carrinho .containeritm .itemcar .discricar {
+  max-width: 15rem;
+}
+.carrinho .containeritm .itemcar .montante input {
+  width: 2rem;
+  height: 1.8rem;
+  margin: 0.6rem;
+  margin-right: 0.3rem;
+  margin-left: 2rem;
+  border: none;
+}
+.carrinho .containeritm .itemcar .montante img {
+  width: 3rem;
+  height: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

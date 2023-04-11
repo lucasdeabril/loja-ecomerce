@@ -116,3 +116,41 @@ ul{
         @include tamanho(6rem,6rem )
     }
 }
+
+.carrinho{
+    margin-top: 10px;
+    @include display(flex,column );
+    @include tamanho(90%,27rem );
+    background-color: white;
+    .containeritm{
+        @include display(flex,column );
+        margin-top: 40px;
+        .itemcar{
+            margin-top: 0.5rem;
+            
+            @include tamanho(100%, 4rem );
+            @include display(flex,row );
+            // justify-content: center;
+            
+            .imgitm{
+                @include tamanho(5rem,5rem );
+                @include transform( 0px, -1.5rem )
+            }
+            .discricar{
+                max-width: 15rem;
+            }
+            .montante{
+                input{
+                    @include tamanho(2rem, 1.8rem );
+                    margin: 0.6rem;
+                    margin-right:0.3rem ;
+                    margin-left:2rem ;
+                    border: none;
+                }
+                img{
+                    @include tamanho(3rem, 0.5rem)
+                }
+            }
+        }
+    }
+}

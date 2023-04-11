@@ -30,3 +30,22 @@ export function filtrofav(e , i){
 
     
 }
+
+export function filtrocar (e){
+    let indice_car = 0
+    let contitm = document.querySelectorAll('.itemcar')
+    let parent= e.closest('div')
+    let ultimo = contitm[contitm.length-1]
+    
+    for(let i = 0;i<contitm.length; i++){
+        if(contitm[i].id == parent.id){
+        indice_car ++
+        }
+    }
+    if(indice_car>=2){
+        ultimo.remove()
+        indice_car = 0
+    }
+
+    // console.log(indice_car) 
+}
