@@ -117,6 +117,7 @@ ul{
     }
 }
 
+
 .carrinho{
     margin-top: 10px;
     @include display(flex,column );
@@ -153,4 +154,21 @@ ul{
             }
         }
     }
+}
+.favoritos{
+    @include display(flex,row );
+    @include tamanho(90%, 10rem );
+        input{
+            @include tamanho(0.7rem,0.7rem )
+        }
+        .divfav{
+            margin-left: 1rem;
+            img{
+            @include tamanho(3rem,3rem );
+            
+        }
+
+    }
+    
+
 }

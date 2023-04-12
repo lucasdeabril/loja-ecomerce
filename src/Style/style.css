@@ -148,4 +148,22 @@ ul li {
 .carrinho .containeritm .itemcar .montante img {
   width: 3rem;
   height: 0.5rem;
+}
+
+.favoritos {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 10rem;
+}
+.favoritos input {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.favoritos .divfav {
+  margin-left: 1rem;
+}
+.favoritos .divfav img {
+  width: 3rem;
+  height: 3rem;
 }/*# sourceMappingURL=style.css.map */

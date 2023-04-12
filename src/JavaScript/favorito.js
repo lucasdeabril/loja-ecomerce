@@ -10,7 +10,7 @@ export function favoritar(e){
     let img_origin = conteiner.querySelector('img')
     let input_origin = conteiner.querySelector('input')
     
-    let destino = document.querySelector('.container')
+    let destino = document.querySelector('.favoritos')
     
 
     let cont = document.createElement('div')
@@ -20,6 +20,8 @@ export function favoritar(e){
     let p3 = document.createElement('p')
     let input = document.createElement('input')
     input.type='button'
+    input.classList.add('buttonfav')
+
     cont.classList.add('divfav')
     cont.id=conteiner.id
     

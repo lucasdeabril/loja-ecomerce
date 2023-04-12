@@ -42,4 +42,8 @@ addEventListener('click', (e)=>{
     if(targetEl.classList.contains('inputnbr')){
         let s = subtotal(targetEl)
     }
+
+    if(targetEl.classList.contains('buttonfav')){
+        let removeitm = remove(targetEl,indice)
+    }
 })
