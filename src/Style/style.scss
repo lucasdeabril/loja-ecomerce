@@ -1,254 +1,481 @@
-@mixin tamanho($width , $height){
-    width: $width;
-    height: $height;
-}
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100&display=swap');
-@mixin display($flex,$row){
-    display:$flex;
-    flex-direction:$row;
-    // flex-wrap: wrap;
-}
-@mixin transform($x,$y){
-    transform: translate($x,$y);
-}
-$cor-azul: rgb(0,96,177);
-$cor-branco-menos: #f6f6f6;
-$cor-branco-mais: #ffffff;
-$cor-laranja: #FF6500;
-$cor-laranja-claro: #ff9100;
-$cor-laranja-muito-claro: #ffac27;
 
-
+@font-face {
+    font-family: KumbhSans;
+    src: url(./Outfit-VariableFont_wght.ttf);
+}
 *{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    // color: white;
-    font-family: sans-serif;
+    font-family: KumbhSans;
+    padding: 0%;
+    margin: 0%;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $cor-azul;
+.head{
+    width: 100%;
+    height: 50px;
+}
+.head ul{
+    margin-left: 7% ;
+    
+}
+
+ul li{
+    display: inline;
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#char{
+    float: right;
+    margin-right: 10%; 
+}
+#char #avatar{
+    width: 40px;
+    margin-left: 30px;
+}
+#carte1{
+    transform: translate(0 , -7px);
+}
+.traco{
+    margin: auto;
+    width: 90%;
+    height: 1px;
+    background-color: rgb(212, 212, 212);
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+#main{
+    position: relative;
+    margin: auto;
+    width: 57%;
+
+}
+#main .foto{
+    border-radius: 3%;
+    width: 330px;
+    display: block;
+    cursor: pointer;
+}
+#main .thumb{
+    border-radius: 7%;
+    width: 65px;
+    cursor: pointer;
+}
+#main .thumb:not(:first-of-type){
+    margin-right: 18px;
+    margin-top: 10px;
+}
+#cinza{
+    padding: 0%;
+    margin: 0%;
+    display: none;
+    position: absolute;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translate(0px,-79%);
 }
-nav{
-
-    
-    margin-top: 1.5rem;
-    display: flex;
-    grid-template-columns: 1rem 4rem 4rem 1rem 1rem 1rem 1rem;
-    width: 100%;
-    height: 3rem;
-    // justify-content: space-between;
-    .nav1{
-
-        input{
-            @include tamanho(40rem, 2rem );
-
-            border-radius: 10px;    
-        }
-    }
-    div{
-        margin: 5px;
-        width: fit-content;
-        height: fit-content;
-        // background-color: red;
-        p{
-            color:white;
-        }
-    }
-    #logo{
-        @include tamanho(13rem,"" )
-    }
-    #perfil{
-        @include display(flex,'' );
-        width:10rem;
-        img{
-            @include transform(1px,-0.5rem )
-        }
-        margin-right: 10rem;
-    }
-    
-}
-ul{
-    @include tamanho(100%, 3rem );
-    background-color: $cor-laranja;
-    list-style: none;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    li{
-        font-family: 'Bebas Neue', cursive;
-        cursor: pointer;
-        font-size: 1.5rem;
-        color: white;
-        display: flex;
-        align-items: center;
-        margin: 1.9rem;
-        width: fit-content;
-        height: 100%;
-        background-color: $cor-laranja;
-        @include transform(0px,0rem );
-        &:hover{
-            background-color: $cor-laranja-claro;
-        };
-    }
-}
-.container{
-    @include tamanho(90%, 25rem );
-    @include display(flex, column );
-    margin-top: 6rem;
-    background-color: $cor-laranja;
-    
-    .destaques{
-        font-size: 2rem;
-        margin: 3px;
-        color: $cor-branco-mais;
-        font-family: 'Bebas Neue', cursive;
-    };
-    .produtos{
-        
-        background-color: $cor-branco-menos;
-        @include display(flex, row  );
-        flex-wrap: wrap;
-        @include tamanho(100%, 100%);
-        
-        input{
-            @include tamanho(0.7rem, 0.7rem )
-        }
-        img{
-            @include tamanho(6rem,6rem );
-        }
-        .itens{
-            @include display(flex, column );
-            justify-content: space-between;
-            margin-left: 1rem;
-            margin-top: 0.5rem;
-            max-width: 11rem;
-            height: 19rem;
-            
-            background-color: $cor-branco-mais;
-            border-radius: 10px;
-            padding: 5px;
-            &:hover{
-                scale: 1.01;
-            }
-            img{
-                @include tamanho(100%, 50% );
-            }
-            .addcarrinho{
-                padding: 0.1rem;
-                border-radius: 5px;
-                color: white;
-                background-color: $cor-laranja;
-                cursor: pointer;
-                &:hover{
-                    background-color: $cor-laranja-claro;
-                }
-                &:active{
-                    background-color: $cor-laranja-muito-claro;
-                }
-                &:hover{
-                    scale: 1.03;
-                }
-            }
-            
-            
-        }
-    }
-    
+#close{
+    margin: auto;
+    transform: translate(950px,60px);
+    /* background-color: orange; */
+    display: inline-block;
+    cursor: pointer;
 }
 
+#controles{
+    /* background-color: violet; */
+    width: 480px;
+    height: 31px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-100px);
+}
 
-.carrinho{
-    margin-top: 10px;
-    @include display(flex,column );
-    @include tamanho(90%,fit-content );
+.imghide{
+    position: absolute;
+    display: inline;
+    left: 50%;
+    top: 50%;
+    transform: translate(-47%,-50%);
+}
+#anti{
+    border-radius: 50%;
+    background-color: rgb(237, 235, 235);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+#anti img{
+    transform: translate(11px,10px);
+}
+#prox{
+    background-color: rgb(237, 235, 235);
+    float: right;
+    width: 33px;
+    height: 43px;
+    cursor: pointer;
+    padding-left: 10px;
+    border-radius: 50%;
+    transform: translate(5px,-44px);
+}
+#prox img{
+    transform: translate(6px,11px);
+}
+.ima1{
+    transform: translate(11px,9px);
+}
+.imghide .foto{
+    border-radius: 3%;
+    width: 430px;
+    display: block;
+    cursor: pointer;
+}
+.imghide .thumb{
+    border-radius: 7%;
+    width: 85px;
+    margin-right: 26px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.showitm{
+    display: inline-block;
+    height: fit-content;
+    width: 50%;
+}
+#discrip{
     
-    background-color:$cor-branco-menos;
-    .containeritm{
-        position: relative;
-        @include display(flex,column );
-        margin-top: 1rem;
-        background-color: $cor-branco-menos;
-        .itemcar{
-            margin-top: 0.5rem;
-            background-color: $cor-branco-mais;
-            
-            @include tamanho(50%, fit-content );
-            @include display(flex,row );
-            align-items: center;
-            justify-content: space-around;
-            // justify-content: center;
-            
-            .imgitm{
-                @include tamanho(5rem,5rem );
-                margin-right: 1rem;
-                margin-left: 1rem;
-            }
-            .discricar{
-                max-width: 15rem;
-            }
-            .montante{
-                input{
-                    @include tamanho(2rem, 1.8rem );
-                    margin: 0.6rem;
-                    margin-right:0.3rem ;
-                    margin-left:2rem ;
-                    border: none;
-                }
-                img{
-                    @include tamanho(3rem, 0.5rem)
-                }
-            }
-        }
-    }
-    .total{
-        margin: 1rem;
-    }
+    width: 50%;
+    float: right;
+}
+#discrip p{
+    margin-bottom: 20px;
+}
+#cpn{
+    color: hsl(26, 100%, 55%);
+    margin-bottom: 20px;    
+}
+h1{
+    margin-bottom: 20px;margin-bottom: 20px;
+}
+#price{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+#off{
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    display: inline-block;
+    margin-left: 20px;
+    border-radius: 10%;
+    height: 23px;
+    width: 37px;
+    padding-left: 7px;
+    padding-top: 4px;
     
 }
-.favoritos{
-    @include display(flex,row );
-    @include tamanho(90%, fit-content );
-    min-height: 14rem;
-    background-color: $cor-branco-menos;
-    padding: 1rem;
-        input{
-            @include tamanho(0.7rem,0.7rem )
-        }
-        .divfav{
-            margin-left: 1rem;
-            
-            @include tamanho(fit-content,14rem );
-            
-            @include display(flex, column );
-            justify-content: space-between;
-            margin-left: 1rem;
-            margin-top: 0.5rem;
-            max-width: 11rem;
-            height: 19rem;
-            
-            background-color: $cor-branco-mais;
-            border-radius: 10px;
-            padding: 5px;
-            &:hover{
-                scale: 1.01;
-            }
-            img{
-                @include tamanho(100%, 50% );
-            }
-            
-
-    }
-    
-
+#ant{
+    color: rgb(165, 163, 163);
+    text-decoration: line-through;
 }
-.hide{
+#mountant{
+    width: 102px;
+    height: 40px;
+    border-radius: 5%;
+    display: inline-block;
+    background-color: rgb(237, 235, 235);
+    padding-left: 25px ;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.montant{
+    display: inline-block;
+    margin-right: 10px ;
+}
+#montante{
+    font-family: monospace;
+    font-size: 21px;
+}
+.cont{
+    margin-left: 5px ;
+    margin-right: 5px;
+}
+.cart{
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 7%;
+    display: inline-block;
+    width: 177px;
+    height: 40px;
+    padding-left: 60px;
+    padding-top: 20px;
+    transform: translate( 40px , 5px);
+    cursor: pointer;
+}
+#carte{
+    margin-right: 20px;
+    
+}
+#menu{
     display: none;
+}
+
+#perfildp{
+    display: none;
+
+    width: 280px;
+    height: 150px;
+    position: absolute;
+    top: 50px;
+    left: 1100px;
+    background-color: rgb(244, 243, 243);
+    padding-left: 10px;
+    padding-top: 10px;
+    
+}
+#vazio{ /*carrinho vazio*/
+    background-color: rgb(244, 244, 244);
+    width: 270px;
+    height: 100px;
+}
+#vazio p{ /*carrinho vazio*/
+    transform: translate(60px,30px);
+}
+ #perfilprd{ /*a parte que vai ficar os produtos */
+    display: none;
+
+    width: 400px;
+    height: 300px;
+}
+#traco{
+    width: 103%;
+    height: 1px;
+    background-color: rgb(187, 187, 187);
+    transform: translate(-10px);
+    margin-bottom: 10px;
+}
+#dptxt{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#perfildp img{
+    width: 30px;
+    display: inline;
+    float: left;
+    transform: translate(0px,7px);
+}
+#dpdesc{
+    /* background-color: aliceblue; */
+    width: 230px;
+    margin-left: 40px;
+    
+}
+#lixo{
+    position: inherit;
+    transform: translate(245px ,-16px);
+    width: 40px;
+
+}
+#lixo img{
+    width: 15px;
+}
+#dpbox{
+    color: white;
+    background-color: hsl(26, 100%, 55%) ;
+    border-radius: 5px;
+    width: 150px;
+    height: 35px;
+    padding-left: 80px;
+    padding-top: 10px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+@media screen and (max-width: 400px){
+    
+
+    @font-face {
+        font-family: KumbhSans;
+        src: url(./Outfit-VariableFont_wght.ttf);
+    }
+    *{
+        font-family: KumbhSans;
+        margin: 0%;
+        padding: 0%;
+    }
+    body{
+        position: relative;
+    }
+    .head{
+        width: 90%;
+        height: 50px;
+        /* background-color: violet; */
+    }
+    .head ul{
+        transform: translate(20px, 10px);
+        
+        
+    }
+    .coll{
+        display: none;
+    }
+    #menu{
+        display: inline;
+        margin-right: 10px;
+    }
+    ul li{
+        display: inline;
+        list-style: none;
+        float: left;
+        margin-top: 10px;
+        cursor: pointer;
+        transform: translate(-50px , 0px);
+    }
+    #char{
+        /* background-color: red; */
+        float: right;
+        margin-right: 4%; 
+        transform: translate(40px,10px);
+    }
+    #char #avatar{
+        width: 40px;
+        margin-left: 30px;
+    }
+    #carte1{
+        transform: translate(0 , -7px);
+    }
+    #traco{
+        display: none;
+    }
+    #main{
+        
+        width: 100%;
+        height: 900px;
+        /* background-color: violet; */
+        margin-top: 20px;
+    }
+    .showitm{
+        display: block;
+        /* background-color: red; */
+        clear: right;
+        width: 100%;
+    }
+
+    
+    #main .foto{
+        border-radius: 0%;
+        width: 100%;
+        display: block;
+        cursor: pointer;
+    }
+    #main .thumb{
+        /* border-radius: 7%; */
+        width: 65px;
+        cursor: pointer;
+        display: none;
+    }
+    #main .thumb:not(:first-of-type){
+        margin-right: 18px;
+        margin-top: 10px;
+    }
+    
+    .imghide{
+        display: none;
+    }
+
+
+    #discrip{
+        margin-top: 20px;
+        width: 90%;
+        float: left;
+
+    }
+    :only-child #discrip{
+        margin-left: 10px;
+        
+
+    }
+    #cpn{
+        font-size: 19px;
+        color: hsl(26, 100%, 55%);
+        margin-bottom: 15px;
+    }
+    #discrip h1{
+        margin-bottom: 18px;
+    }
+
+    #price{
+        display: inline-block;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    #off{
+        color: hsl(26, 100%, 55%);
+        background-color: hsl(25, 100%, 94%);
+        display: inline-block;
+        margin-left: 20px;
+        
+        border-radius: 10%;
+        height: 23px;
+        width: 37px;
+        padding-left: 7px;
+        padding-top: 4px;
+        
+    }
+    #ant{
+        color: rgb(165, 163, 163);
+        text-decoration: line-through;
+        margin-top: 20px;
+        float: right;
+    }
+    #mountant{
+        width: 90%;
+        height: 40px;
+        border-radius: 5%;
+        display: inline-block;
+        background-color: rgb(237, 235, 235);
+        padding-left: 25px ;
+        padding-top: 20px;
+        cursor: pointer;
+        margin-top: 20px;
+        transform: translate(10px);
+    }
+    .montant{
+        display: inline-block;
+        margin-right: 10px ;
+    }
+
+    #menos{
+        margin-right: 100px;
+    }
+    #mais{
+        margin-left: 90px;
+    }
+    .cont{
+        margin-left: 5px ;
+        margin-right: 5px;
+    }
+    .cart{
+        color: white;
+        background-color: hsl(26, 100%, 55%);
+        border-radius: 10%;
+        display: inline-block;
+        width: 80%;
+        height: 40px;
+        
+        padding-top: 20px;
+        
+        cursor: pointer;
+        transform: translate(10px);
+        margin-top: 20px;
+    }
+    #carte{
+        margin-left: 36px;
+        margin-right: 15px;
+        
+    }
+    
+
 }
