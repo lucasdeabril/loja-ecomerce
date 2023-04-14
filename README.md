@@ -2,7 +2,7 @@
 
 > Status: em desenvolvimento ⚠️
 
-Esta aplicação sumula uma loja on-line de produtos eletronicos do mercado gamer.
+Esta aplicação simula uma loja on-line de produtos eletronicos.
 
 Dentre as interações com os elementos temos:
 
