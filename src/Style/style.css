@@ -1,7 +1,4 @@
-.hide {
-  display: none;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -29,7 +26,7 @@ nav {
 nav .nav1 input {
   width: 40rem;
   height: 2rem;
-  border-radius: 10%;
+  border-radius: 10px;
 }
 nav div {
   margin: 5px;
@@ -66,14 +63,21 @@ ul {
   align-items: center;
 }
 ul li {
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
+  font-size: 1.5rem;
   color: white;
   display: flex;
+  align-items: center;
   margin: 1.9rem;
   width: -moz-fit-content;
   width: fit-content;
-  height: 2rem;
+  height: 100%;
   background-color: #FF6500;
-  transform: translate(0px, 0.4rem);
+  transform: translate(0px, 0rem);
+}
+ul li:hover {
+  background-color: #ff9100;
 }
 
 .container {
@@ -83,10 +87,15 @@ ul li {
   flex-direction: column;
   margin-top: 6rem;
   background-color: #FF6500;
-  padding-top: 3rem;
+}
+.container .destaques {
+  font-size: 2rem;
+  margin: 3px;
+  color: #ffffff;
+  font-family: "Bebas Neue", cursive;
 }
 .container .produtos {
-  background-color: white;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -102,11 +111,39 @@ ul li {
   height: 6rem;
 }
 .container .produtos .itens {
-  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  max-width: 11rem;
+  height: 19rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 5px;
 }
-.container img {
-  width: 6rem;
-  height: 6rem;
+.container .produtos .itens:hover {
+  scale: 1.01;
+}
+.container .produtos .itens img {
+  width: 100%;
+  height: 50%;
+}
+.container .produtos .itens .addcarrinho {
+  padding: 0.1rem;
+  border-radius: 5px;
+  color: white;
+  background-color: #FF6500;
+  cursor: pointer;
+}
+.container .produtos .itens .addcarrinho:hover {
+  background-color: #ff9100;
+}
+.container .produtos .itens .addcarrinho:active {
+  background-color: #ffac27;
+}
+.container .produtos .itens .addcarrinho:hover {
+  scale: 1.03;
 }
 
 .carrinho {
@@ -114,25 +151,33 @@ ul li {
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 27rem;
-  background-color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #f6f6f6;
 }
 .carrinho .containeritm {
+  position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 1rem;
+  background-color: #f6f6f6;
 }
 .carrinho .containeritm .itemcar {
   margin-top: 0.5rem;
-  width: 100%;
-  height: 4rem;
+  background-color: #ffffff;
+  width: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 .carrinho .containeritm .itemcar .imgitm {
   width: 5rem;
   height: 5rem;
-  transform: translate(0px, -1.5rem);
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 .carrinho .containeritm .itemcar .discricar {
   max-width: 15rem;
@@ -149,12 +194,19 @@ ul li {
   width: 3rem;
   height: 0.5rem;
 }
+.carrinho .total {
+  margin: 1rem;
+}
 
 .favoritos {
   display: flex;
   flex-direction: row;
   width: 90%;
-  height: 10rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 14rem;
+  background-color: #f6f6f6;
+  padding: 1rem;
 }
 .favoritos input {
   width: 0.7rem;
@@ -162,8 +214,28 @@ ul li {
 }
 .favoritos .divfav {
   margin-left: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  max-width: 11rem;
+  height: 19rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+}
+.favoritos .divfav:hover {
+  scale: 1.01;
 }
 .favoritos .divfav img {
-  width: 3rem;
-  height: 3rem;
+  width: 100%;
+  height: 50%;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -76,7 +76,7 @@ export function subtotal(e){
         let contval = parseFloat(Number(contitm[i].querySelector('.valortot').innerText))   
         let montante = Number(contnum.value) * contval
         checkout += montante
-        console.log(montante)
+        // console.log(montante)
     }
     
 

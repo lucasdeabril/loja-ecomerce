@@ -2,6 +2,7 @@
     width: $width;
     height: $height;
 }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100&display=swap');
 @mixin display($flex,$row){
     display:$flex;
     flex-direction:$row;
@@ -11,11 +12,13 @@
     transform: translate($x,$y);
 }
 $cor-azul: rgb(0,96,177);
+$cor-branco-menos: #f6f6f6;
+$cor-branco-mais: #ffffff;
 $cor-laranja: #FF6500;
+$cor-laranja-claro: #ff9100;
+$cor-laranja-muito-claro: #ffac27;
 
-.hide{
-    display: none;
-}
+
 *{
     padding: 0px;
     margin: 0px;
@@ -46,7 +49,7 @@ nav{
         input{
             @include tamanho(40rem, 2rem );
 
-            border-radius: 10%;    
+            border-radius: 10px;    
         }
     }
     div{
@@ -80,13 +83,20 @@ ul{
     justify-content: center;
     align-items: center;
     li{
+        font-family: 'Bebas Neue', cursive;
+        cursor: pointer;
+        font-size: 1.5rem;
         color: white;
         display: flex;
+        align-items: center;
         margin: 1.9rem;
         width: fit-content;
-        height: 2rem;
+        height: 100%;
         background-color: $cor-laranja;
-        @include transform(0px,0.4rem )
+        @include transform(0px,0rem );
+        &:hover{
+            background-color: $cor-laranja-claro;
+        };
     }
 }
 .container{
@@ -94,13 +104,20 @@ ul{
     @include display(flex, column );
     margin-top: 6rem;
     background-color: $cor-laranja;
-    padding-top: 3rem;
+    
+    .destaques{
+        font-size: 2rem;
+        margin: 3px;
+        color: $cor-branco-mais;
+        font-family: 'Bebas Neue', cursive;
+    };
     .produtos{
         
-        background-color: white;
+        background-color: $cor-branco-menos;
         @include display(flex, row  );
         flex-wrap: wrap;
         @include tamanho(100%, 100%);
+        
         input{
             @include tamanho(0.7rem, 0.7rem )
         }
@@ -108,34 +125,71 @@ ul{
             @include tamanho(6rem,6rem );
         }
         .itens{
-            margin-right: 2rem;
+            @include display(flex, column );
+            justify-content: space-between;
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+            max-width: 11rem;
+            height: 19rem;
+            
+            background-color: $cor-branco-mais;
+            border-radius: 10px;
+            padding: 5px;
+            &:hover{
+                scale: 1.01;
+            }
+            img{
+                @include tamanho(100%, 50% );
+            }
+            .addcarrinho{
+                padding: 0.1rem;
+                border-radius: 5px;
+                color: white;
+                background-color: $cor-laranja;
+                cursor: pointer;
+                &:hover{
+                    background-color: $cor-laranja-claro;
+                }
+                &:active{
+                    background-color: $cor-laranja-muito-claro;
+                }
+                &:hover{
+                    scale: 1.03;
+                }
+            }
+            
             
         }
     }
-    img{
-        @include tamanho(6rem,6rem )
-    }
+    
 }
 
 
 .carrinho{
     margin-top: 10px;
     @include display(flex,column );
-    @include tamanho(90%,27rem );
-    background-color: white;
+    @include tamanho(90%,fit-content );
+    
+    background-color:$cor-branco-menos;
     .containeritm{
+        position: relative;
         @include display(flex,column );
-        margin-top: 40px;
+        margin-top: 1rem;
+        background-color: $cor-branco-menos;
         .itemcar{
             margin-top: 0.5rem;
+            background-color: $cor-branco-mais;
             
-            @include tamanho(100%, 4rem );
+            @include tamanho(50%, fit-content );
             @include display(flex,row );
+            align-items: center;
+            justify-content: space-around;
             // justify-content: center;
             
             .imgitm{
                 @include tamanho(5rem,5rem );
-                @include transform( 0px, -1.5rem )
+                margin-right: 1rem;
+                margin-left: 1rem;
             }
             .discricar{
                 max-width: 15rem;
@@ -154,21 +208,47 @@ ul{
             }
         }
     }
+    .total{
+        margin: 1rem;
+    }
+    
 }
 .favoritos{
     @include display(flex,row );
-    @include tamanho(90%, 10rem );
+    @include tamanho(90%, fit-content );
+    min-height: 14rem;
+    background-color: $cor-branco-menos;
+    padding: 1rem;
         input{
             @include tamanho(0.7rem,0.7rem )
         }
         .divfav{
             margin-left: 1rem;
-            img{
-            @include tamanho(3rem,3rem );
             
-        }
+            @include tamanho(fit-content,14rem );
+            
+            @include display(flex, column );
+            justify-content: space-between;
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+            max-width: 11rem;
+            height: 19rem;
+            
+            background-color: $cor-branco-mais;
+            border-radius: 10px;
+            padding: 5px;
+            &:hover{
+                scale: 1.01;
+            }
+            img{
+                @include tamanho(100%, 50% );
+            }
+            
 
     }
     
 
+}
+.hide{
+    display: none;
 }

@@ -6,6 +6,7 @@ import { remove } from "./remove.js"
 import { addcarrinho } from "./addcarrinho.js"
 import { remover_item_carrinho } from "./remove.js"
 import { subtotal } from "./addcarrinho.js"
+import { switchel } from "./switchel.js"
 
 
 let indice = 1
@@ -45,5 +46,15 @@ addEventListener('click', (e)=>{
 
     if(targetEl.classList.contains('buttonfav')){
         let removeitm = remove(targetEl,indice)
+    }
+
+    if(targetEl.classList.contains('cessao')){
+        let s = switchel(1)
+    }
+    if(targetEl.classList.contains('loja')){
+        let s = switchel(2)
+    }
+    if(targetEl.classList.contains('compra')){
+        let s = switchel(3)
     }
 })
