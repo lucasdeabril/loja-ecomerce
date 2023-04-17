@@ -1,6 +1,7 @@
 ## Loja de eletrônicos
 
 > Status: em desenvolvimento ⚠️
+Link do deploy: https://lucasdeabril.github.io/loja-ecomerce/
 
 Esta aplicação simula uma loja on-line de produtos eletrônicos.
 
