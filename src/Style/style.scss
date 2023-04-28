@@ -252,3 +252,60 @@ ul{
 .hide{
     display: none;
 }
+@media screen and (max-width: 400px){
+    nav{
+      width: 90%;
+      height: 100px;
+      
+      display: flex;
+      margin-left: -3.9rem;
+      justify-content: center;
+      
+
+      #menu{
+        display: none;
+      }
+      #logo{
+        width: 90px;
+        margin-left: 20px;
+      }
+      .nav1{
+
+        input{
+            @include tamanho(7rem, 1.3rem );
+
+            border-radius: 10px;    
+        }  
+    }
+    #perfil{
+        width: 1px;
+        margin-right: 0px;
+        opacity: 0;
+            img{
+                @include tamanho(3rem,2.4rem )
+
+            }
+            p{display: none;}
+        }
+    }
+
+    // departamentos
+    ul{
+        display: none;
+    }
+    // container
+    .container{
+        width: 80%;
+        @include transform(-0.9rem,0rem );
+        height: fit-content;
+        .produtos{
+            justify-content: center;
+            .itens{
+                max-width: 300rem;
+                @include tamanho(80%, 23rem );
+                margin-left: 0;
+            }
+        }
+
+    }
+  }

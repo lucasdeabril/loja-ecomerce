@@ -238,4 +238,56 @@ ul li:hover {
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width: 400px) {
+  nav {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    margin-left: -3.9rem;
+    justify-content: center;
+  }
+  nav #menu {
+    display: none;
+  }
+  nav #logo {
+    width: 90px;
+    margin-left: 20px;
+  }
+  nav .nav1 input {
+    width: 7rem;
+    height: 1.3rem;
+    border-radius: 10px;
+  }
+  nav #perfil {
+    width: 1px;
+    margin-right: 0px;
+    opacity: 0;
+  }
+  nav #perfil img {
+    width: 3rem;
+    height: 2.4rem;
+  }
+  nav #perfil p {
+    display: none;
+  }
+  ul {
+    display: none;
+  }
+  .container {
+    width: 80%;
+    transform: translate(-0.9rem, 0rem);
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .produtos {
+    justify-content: center;
+  }
+  .container .produtos .itens {
+    max-width: 300rem;
+    width: 80%;
+    height: 23rem;
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
