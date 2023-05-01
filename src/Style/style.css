@@ -245,7 +245,7 @@ ul li:hover {
     width: 90%;
     height: 100px;
     display: flex;
-    margin-left: -3.9rem;
+    margin-left: -2rem;
     justify-content: center;
   }
   nav #menu {
