@@ -7,6 +7,9 @@ import { addcarrinho } from "./addcarrinho.js"
 import { remover_item_carrinho } from "./remove.js"
 import { subtotal } from "./addcarrinho.js"
 import { switchel } from "./switchel.js"
+import { validador } from "./perfil.js"
+import { login } from "./perfil.js"
+import { sethist } from "./historico.js"
 
 
 let indice = 1
@@ -47,14 +50,28 @@ addEventListener('click', (e)=>{
     if(targetEl.classList.contains('buttonfav')){
         let removeitm = remove(targetEl,indice)
     }
-
-    if(targetEl.classList.contains('cessao')){
+    
+    if(targetEl.classList.contains('loja')){
         let s = switchel(1)
     }
-    if(targetEl.classList.contains('loja')){
+    if(targetEl.classList.contains('cessao')){
         let s = switchel(2)
     }
     if(targetEl.classList.contains('compra')){
         let s = switchel(3)
     }
+    if(targetEl.classList.contains('boxperfil')){
+        let s = switchel(4)
+    }
+    if(targetEl.classList.contains('criarconta')){
+        let c = validador()
+    }
+    if(targetEl.classList.contains('login')){
+        let l = login()
+    }
+    if(targetEl.classList.contains('comprar')){
+        let h = sethist()
+    }
+
+    
 })
