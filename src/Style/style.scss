@@ -52,6 +52,7 @@ nav{
             border-radius: 10px;    
         }
     }
+    
     div{
         margin: 5px;
         width: fit-content;
@@ -97,10 +98,24 @@ ul{
         &:hover{
             background-color: $cor-laranja-claro;
         };
+        input{
+            all: unset;
+            padding: 5px;
+        }
     }
 }
+.slider{
+    @include tamanho(70rem, fit-content );
+    overflow: hidden;
+  .slid{
+    @include tamanho(fit-content,fit-content );
+    @include display(flex, row );
+    align-items: center;
+}  
+}
+
 .container{
-    @include tamanho(90%, 25rem );
+    @include tamanho(70rem, fit-content );
     @include display(flex, column );
     margin-top: 6rem;
     background-color: $cor-laranja;
@@ -168,8 +183,10 @@ ul{
 .carrinho{
     margin-top: 10px;
     @include display(flex,column );
-    @include tamanho(90%,fit-content );
+    @include tamanho(10%,fit-content );
     
+    width: 70rem;
+    min-height: 14rem;
     background-color:$cor-branco-menos;
     .containeritm{
         position: relative;
@@ -210,15 +227,34 @@ ul{
     }
     .total{
         margin: 1rem;
+        position: relative;
+    }
+    .comprar{
+        all: unset;
+        
+        position: absolute;
+        padding: 5px;
+        border-radius: 5px;
+        border: solid 1px black;
+        top: 0px;
+        @include transform(8rem,0rem );
+        
+        &:hover{
+            background-color: $cor-laranja;
+            border: solid 1px white;
+            
+        }
     }
     
 }
 .favoritos{
     @include display(flex,row );
-    @include tamanho(90%, fit-content );
+    @include tamanho(10%, fit-content );
+    width: 70rem;
     min-height: 14rem;
     background-color: $cor-branco-menos;
     padding: 1rem;
+    
         input{
             @include tamanho(0.7rem,0.7rem )
         }
@@ -249,43 +285,108 @@ ul{
     
 
 }
-.hide{
-    display: none;
+// seção de criação de perfil e login de usuário
+.criarperfil{
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70rem;
+    min-height: 14rem;
+    background-color: $cor-branco-menos;
+    .ou{
+        margin: 40px;
+    }
+    .boxlogin{
+        @include display(flex,column )
+        
+    }
+    .boxcriar{
+        @include display(flex,column )
+    }
+}
+.historico{
+    margin-top: 10px;
+    @include display(flex,column );
+    @include tamanho(10%,fit-content );
+    width: 70rem;
+    min-height: 14rem;
+    background-color:$cor-branco-menos;
+    .itemcar{
+        margin-top: 0.5rem;
+        background-color: $cor-branco-mais;
+        
+        @include tamanho(50%, fit-content );
+        @include display(flex,row );
+        align-items: center;
+        justify-content: space-around;
+        // justify-content: center;
+        .removeritm{
+            display: none;
+        }
+        .imgitm{
+            @include tamanho(5rem,5rem );
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+        .discricar{
+            max-width: 15rem;
+        }
+        .montante{
+            input{
+                @include tamanho(2rem, 1.8rem );
+                margin: 0.6rem;
+                margin-right:0.3rem ;
+                margin-left:2rem ;
+                border: none;
+            }
+            img{
+                @include tamanho(3rem, 0.5rem)
+            }
+        }
+    }
+    
 }
 @media screen and (max-width: 400px){
     nav{
-      width: 90%;
-      height: 100px;
+        width: 90%;
+        height: 100px;
+        
+        display: flex;
+        margin-left: -2rem;
+        justify-content: center;
       
-      display: flex;
-      margin-left: -3.9rem;
-      justify-content: center;
-      
+        .sac{
+            display: none;
+        }
+        #menu{
+            display: none;
+        }
+        #logo{
+            width: 90px;
+            margin-left: 20px;
+        }
+        .nav1{
 
-      #menu{
-        display: none;
-      }
-      #logo{
-        width: 90px;
-        margin-left: 20px;
-      }
-      .nav1{
+            input{
+                @include tamanho(7rem, 1.3rem );
 
-        input{
-            @include tamanho(7rem, 1.3rem );
-
-            border-radius: 10px;    
-        }  
-    }
-    #perfil{
-        width: 1px;
-        margin-right: 0px;
-        opacity: 0;
+                border-radius: 10px;    
+            }  
+        }
+        #perfil{
+            @include tamanho(1rem,2rem );
+            margin-right: 7px;
+            opacity: 1;
             img{
                 @include tamanho(3rem,2.4rem )
 
             }
             p{display: none;}
+            .boxperfil{
+                @include tamanho(2.5rem,2.5rem );
+            }
         }
     }
 
@@ -293,19 +394,91 @@ ul{
     ul{
         display: none;
     }
+    // slider
+    .slider{
+        
+        @include tamanho(20rem,fit-content);
+        @include transform(-1rem,0px );
+        align-items: flex-start;
+    }
+    // slid
+    .slid{
+        @include display(flex,column );
+        align-items: start;
+    }
     // container
     .container{
-        width: 80%;
-        @include transform(-0.9rem,0rem );
-        height: fit-content;
+        @include tamanho(20rem,fit-content );
+        
+        
         .produtos{
             justify-content: center;
             .itens{
-                max-width: 300rem;
-                @include tamanho(80%, 23rem );
+                
+                @include tamanho(90%, 23rem );
                 margin-left: 0;
             }
         }
 
     }
-  }
+    // favoritos
+    .favoritos{
+        display: flex;
+        flex-direction: column;
+        @include tamanho(20rem,fit-content );
+        align-items: center;
+        @include transform(0px,-50rem );
+
+        .divfav{
+            @include tamanho(70%,21rem );
+            max-width:399rem;
+            margin-left: 0%;
+            img{
+                @include tamanho(12rem,13rem )
+            }
+        }
+    }
+    // carrinho
+    .carrinho{
+        @include transform(0px,-50rem );
+        @include tamanho(20rem,fit-content );
+        .containeritm{
+            align-items: center;
+            .itemcar{
+                width: 99%;
+            }
+        }
+    }
+    .criarperfil{
+        @include transform(0rem,-50rem );
+        @include display(flex,column );
+        @include tamanho(20rem,fit-content );
+        padding: 20px 0px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        .ou{
+            margin: 20px;
+        }
+        .seuhist{
+            @include tamanho(fit-content,fit-content );
+            .historico{
+                @include tamanho(fit-content,fit-content );
+            }
+        }
+    }
+
+    .hide{
+        display: none;
+    }
+    .historico{
+        .itemcar{
+            @include transform(0rem,0rem );
+            @include tamanho(20rem,fit-content );
+        }
+        
+    }
+}
+.hide{
+    display: none;
+}

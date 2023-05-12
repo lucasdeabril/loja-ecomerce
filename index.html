@@ -14,94 +14,127 @@
     <div class="nav1"><img id="logo" class="loja" src="./src/fotos/logo.png" alt=""></div>
     <div class="nav1"><input type="text" id="pesquisa"></div>
     <div class="nav1" id="perfil">
-        <img src="./src/fotos/perfil.png" alt="">
-        <p>Faça o login ou cadastre-se</p>
+    <img class="boxperfil" src="./src/fotos/perfil.png" alt="">
+    <p id="perfilinicio">Faça o login ou cadastre-se</p>
     </div>
-    <div><img src="./src/fotos/sac.png" alt=""></div>
+    
+    <div><img class="sac" src="./src/fotos/sac.png" alt=""></div>
     <div><img class="cessao" src="./src/fotos/favoritos.png" alt=""></div>
     <div><img class="compra" src="./src/fotos/carrinho.png" alt=""></div>
   </nav>
     <ul> <!-- navegação de departamentos -->
-    <li>DEPARTAMENTOS</li>
-    <li>LANÇAMENTOS</li>
-    <li>PC GAMER</li>
-    <li>TV</li>
-    <li>OFERTA DO DIA</li>
-    <li>OPENBOX</li>
-    <li>SEJA VIP</li>
-    <li>CARTÃO CODE</li>
-    <li>BAIXE O APP</li>
+    <li> <input type="button" value="DEPARTAMENTOS"></li>
+    <li> <input type="button" value="LANÇAMENTOS"></li>
+    <li> <input type="button" value="PC GAMER"></li>
+    <li> <input type="button" value="TV"></li>
+    <li> <input type="button" value="OFERTA DO DIA"></li>
+    <li> <input type="button" value="OPENBOX"></li>
+    <li> <input type="button" value="SEJA VIP"></li>
+    <li> <input type="button" value="CLUBE CODE"></li>
+    <li> <input type="button" value="BAIXE O APP"></li>
    </ul> 
     <!-- lista de produtos -->
-    <div class="container">
-        <p class="destaques">Destaques</p>
-        <div class="produtos">
+    <div class="slider" view="true">
+    <div class="slid">
+        <div class="container">
+            <p class="destaques">Destaques</p>
+            <div class="produtos">
 
-            <div id="placa" class="itens" valor="2700.99">
-            <img name="imgdiv" src="./src/fotos/3060.jpg" alt="">
-            <p class="descrição">RTX 3060 4gb</p>
-            <p class="valor">de R$ 4800,99 por R$</p>
-            <p class="valorfinal">2700.90</p>
-            Favoritar <input class="favorito" type="checkbox" name="" id="Favoritar">
-            <p class="addcarrinho">adicionar ao carrinho</p>
-
-            </div>
-
-            <div id="monitor" class="itens" valor=2899.90>
-                <img name="imgdiv" src="./src/fotos/monitor.jpg" alt="">
-                <p class="descrição">Monitor GAMER 25polegadas 4k curvo</p>
-                <p class="valor">de R$ 3599,90 por R$</p>
-                <p class="valorfinal">2899.90</p>
+                <div id="placa" class="itens" valor="2700.99">
+                <img name="imgdiv" src="./src/fotos/3060.jpg" alt="">
+                <p class="descrição">RTX 3060 4gb</p>
+                <p class="valor">de R$ 4800,99 por R$</p>
+                <p class="valorfinal">2700.90</p>
                 Favoritar <input class="favorito" type="checkbox" name="" id="Favoritar">
                 <p class="addcarrinho">adicionar ao carrinho</p>
+
+                </div>
+
+                <div id="monitor" class="itens" valor=2899.90>
+                    <img name="imgdiv" src="./src/fotos/monitor.jpg" alt="">
+                    <p class="descrição">Monitor GAMER 25polegadas 4k curvo</p>
+                    <p class="valor">de R$ 3599,90 por R$</p>
+                    <p class="valorfinal">2899.90</p>
+                    Favoritar <input class="favorito" type="checkbox" name="" id="Favoritar">
+                    <p class="addcarrinho">adicionar ao carrinho</p>
+                </div>
+                
+                <div id="mouse" class="itens" valor=2899.90>
+                    <img name="imgdiv" src="./src/fotos/mouse gamer logitech.jpg" alt="">
+                    <p class="descrição">Mouse gamer logitech G502 HERO</p>
+                    <p class="valor">de R$ 189,90 por R$</p>
+                    <p class="valorfinal">149.90</p>
+                    Favoritar <input class="favorito" type="checkbox" name="" id="Favoritar">
+                    <p class="addcarrinho">adicionar ao carrinho</p>
+                </div>
+
+                <div id="teclado" class="itens" valor=2899.90>
+                    <img name="imgdiv" src="./src/fotos/tecladogamerhusky.jpg" alt="">
+                    <p class="descrição">Tecaldo gamer husky RGB</p>
+                    <p class="valor">de R$ 459,90 por R$</p>
+                    <p class="valorfinal">389.90</p>
+                    Favoritar <input class="favorito" type="checkbox" name="" id="Favoritar">
+                    <p class="addcarrinho">adicionar ao carrinho</p>
+                </div>
+
+                <div id="processador" class="itens" valor=2899.90>
+                    <img name="imgdiv" src="./src/fotos/processador intel core i7 10700k.jpg" alt="">
+                    <p class="descrição">Processador Intel core i7 10700k</p>
+                    <p class="valor">de R$ 1899,90 por R$</p>
+                    <p class="valorfinal">1359.90</p>
+                    Favoritar <input class="favorito" type="checkbox" name="" id="Favoritar">
+                    <p class="addcarrinho">adicionar ao carrinho</p>
+                </div>
+
             </div>
             
-            <div id="mouse" class="itens" valor=2899.90>
-                <img name="imgdiv" src="./src/fotos/mouse gamer logitech.jpg" alt="">
-                <p class="descrição">Mouse gamer logitech G502 HERO</p>
-                <p class="valor">de R$ 189,90 por R$</p>
-                <p class="valorfinal">149.90</p>
-                Favoritar <input class="favorito" type="checkbox" name="" id="Favoritar">
-                <p class="addcarrinho">adicionar ao carrinho</p>
-            </div>
-
-            <div id="teclado" class="itens" valor=2899.90>
-                <img name="imgdiv" src="./src/fotos/tecladogamerhusky.jpg" alt="">
-                <p class="descrição">Tecaldo gamer husky RGB</p>
-                <p class="valor">de R$ 459,90 por R$</p>
-                <p class="valorfinal">389.90</p>
-                Favoritar <input class="favorito" type="checkbox" name="" id="Favoritar">
-                <p class="addcarrinho">adicionar ao carrinho</p>
-            </div>
-
-            <div id="processador" class="itens" valor=2899.90>
-                <img name="imgdiv" src="./src/fotos/processador intel core i7 10700k.jpg" alt="">
-                <p class="descrição">Processador Intel core i7 10700k</p>
-                <p class="valor">de R$ 1899,90 por R$</p>
-                <p class="valorfinal">1359.90</p>
-                Favoritar <input class="favorito" type="checkbox" name="" id="Favoritar">
-                <p class="addcarrinho">adicionar ao carrinho</p>
-            </div>
-
         </div>
-        
-    </div>
-    <div class="favoritos hide">
-        
-    </div>
-    <div class="carrinho hide">
-            <div class="titulocar">
-                <h1>Seu carrinho</h1>
-            </div>
+        <div class="favoritos">
+            
+        </div>
+        <div class="carrinho">
+                <div class="titulocar">
+                    <h1>Seu carrinho</h1>
+                </div>
 
-            <div class="containeritm">
+                <div class="containeritm">
+                    
+                </div>
+
+                <div class="total">
+                    <h2>Valor final:</h2>
+                    <div class="checkout"></div>
+                    <input type="button" class="comprar" value="comprar">
+                </div>
+        </div>
+        <div class="criarperfil">
+            <div class="loghide">
+                <div class="boxlogin">
+                    <h2>Faça seu login</h2>
+                    <input class="registreduser" type="text" placeholder="Nome de usuário">
+                    <input class="registredpasword" type='password' placeholder="Senha">
+                    <input class="login" type='button' value="login">
+                </div>
+                <div class="ou"><h3>ou</h3></div>
+                <div class="boxcriar">
+                    <h2>Crie uma conta</h2>
+                    <input id="newuser" type="text" placeholder="Nome de usuário">
+                    <input id="senha1" type='password' placeholder="digite uma senha">
+                    <input id="senha2" type='password' placeholder="confirme sua senha">
+                    <input class="criarconta" type='button' value="Criar conta">
+                </div>
+            </div>
                 
+            <div class="seuhist hide">
+                <div class="historico">
+                
+                </div>
             </div>
-
-            <div class="total">
-                <h2>Valor final:</h2>
-                <div class="checkout"></div>
-            </div>
+            
         </div>
+    </div>
+    </div>
+      
+    
 </body>
 </html>
