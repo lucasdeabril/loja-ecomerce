@@ -12,24 +12,9 @@ export function switchel (e) {
        slid.style.marginLeft='-100%'
     }
     if (e == 3){
-        if(carrinho.classList.contains('hide')){
-
-            if (favorito.classList.contains('hide')){
-                loja.classList.toggle('hide') 
-                carrinho.classList.toggle('hide')
-            }else{
-                carrinho.classList.toggle('hide')
-                favorito.classList.toggle('hide')
-            }
-            
-            
-        }else{
-            console.log(loja)
-        }
+       slid.style.marginLeft='-200%'
     }
-        
-        
-
-    
-    
+    if (e == 4){
+       slid.style.marginLeft='-300%'
+    }
 }
