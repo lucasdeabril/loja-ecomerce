@@ -10,6 +10,7 @@ import { switchel } from "./switchel.js"
 import { validador } from "./perfil.js"
 import { login } from "./perfil.js"
 import { sethist } from "./historico.js"
+import { userfav } from "./userfav.js"
 
 
 let indice = 1
@@ -20,17 +21,24 @@ addEventListener('click', (e)=>{
     
     // toda a parte referente ao favoritos
     if (targetEl.classList.contains('favorito')){
-        targetEl.classList.toggle('checado')
-        if(targetEl.classList.contains('checado')){
-            console.log('checado')
-            let F = favoritar(targetEl)
-
-            // targetEl.classList.toggle('hide')
-
-            let filtro_fav = filtrofav(targetEl,indice)
+        let id = document.querySelector('#perfilinicio')
+        if (id.innerText == 'Faça o login ou cadastre-se'){
+            alert('Faça o login ou cadastre-se no nosso site antes de prosseguir')
         }else{
-            let removeitm = remove(targetEl,indice)
+            
+            targetEl.classList.toggle('checado')
+        
+            if(targetEl.classList.contains('checado')){
+                console.log('checado')
+                let F = favoritar(targetEl)
+                let u = userfav()
+
+                let filtro_fav = filtrofav(targetEl,indice)
+            }else{
+                let removeitm = remove(targetEl,indice)
+            } 
         }
+        
         
     }
     

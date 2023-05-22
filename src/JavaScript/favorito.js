@@ -36,15 +36,12 @@ export function favoritar(e){
     destino.appendChild(cont)
 
     
+
     foto.src = img_origin.src
     let pdest = cont.querySelectorAll('p')
-    for(let i=0 ; i<P_origin.length ;i++){
+    for(let i=0 ; i<3 ;i++){
        pdest[i].innerText= P_origin[i].innerText
     }
 
     
-
-    
-    
-
 }

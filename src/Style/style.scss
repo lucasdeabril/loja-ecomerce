@@ -111,7 +111,8 @@ ul{
     @include tamanho(fit-content,fit-content );
     @include display(flex, row );
     align-items: center;
-}  
+    align-items: flex-start;
+    }  
 }
 
 .container{
@@ -348,6 +349,14 @@ ul{
     }
     
 }
+
+
+
+
+
+
+
+
 @media screen and (max-width: 400px){
     nav{
         width: 90%;
@@ -396,15 +405,13 @@ ul{
     }
     // slider
     .slider{
-        
         @include tamanho(20rem,fit-content);
-        @include transform(-1rem,0px );
-        align-items: flex-start;
     }
     // slid
     .slid{
-        @include display(flex,column );
-        align-items: start;
+        @include display(flex,row );
+        @include tamanho(fit-content,fit-content );
+        align-items: flex-start;
     }
     // container
     .container{
@@ -427,11 +434,11 @@ ul{
         flex-direction: column;
         @include tamanho(20rem,fit-content );
         align-items: center;
-        @include transform(0px,-50rem );
+        min-height: 21rem;
 
         .divfav{
             @include tamanho(70%,21rem );
-            max-width:399rem;
+            max-width:40rem;
             margin-left: 0%;
             img{
                 @include tamanho(12rem,13rem )
@@ -440,7 +447,6 @@ ul{
     }
     // carrinho
     .carrinho{
-        @include transform(0px,-50rem );
         @include tamanho(20rem,fit-content );
         .containeritm{
             align-items: center;
@@ -450,15 +456,20 @@ ul{
         }
     }
     .criarperfil{
-        @include transform(0rem,-50rem );
         @include display(flex,column );
         @include tamanho(20rem,fit-content );
-        padding: 20px 0px;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: nowrap;
+        padding: 20px;
+        .boxlogin{
+            @include tamanho(10rem,fit-content );
+            
+        }
         .ou{
-            margin: 20px;
+            margin: 10px;
+            
+        }
+        .boxcriar{
+            
+            @include tamanho(10rem,fit-content );
         }
         .seuhist{
             @include tamanho(fit-content,fit-content );
@@ -473,8 +484,11 @@ ul{
     }
     .historico{
         .itemcar{
-            @include transform(0rem,0rem );
-            @include tamanho(20rem,fit-content );
+            @include transform(-1rem,0rem );
+            @include tamanho(19rem,fit-content );
+            .montante{
+                @include tamanho(1px,100px )
+            }
         }
         
     }

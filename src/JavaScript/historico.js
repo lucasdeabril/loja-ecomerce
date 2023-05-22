@@ -9,7 +9,7 @@ if(perfilinicio.innerHTML=='Faça o login ou cadastre-se'){
     alert('faça seu login cadastre-se para prosseguir')
 }else{
     
-    user.historico+=carrinho.innerHTML
+    user.historico+= `<div class='cupom'>Cupom de compra</div>${carrinho.innerHTML}`
     console.log(user.historico)
     localStorage.setItem(perfilinicio.innerHTML,JSON.stringify(user))
 }

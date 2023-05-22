@@ -10,7 +10,8 @@ let perfilinicio = document.querySelector('#perfilinicio')
 let user = {
     username:'',
     password:'',
-    historico:'1'
+    historico:'1',
+    favoritos: ''
 };
 
 let userplace = ''
@@ -55,6 +56,6 @@ export function login(){
     }else{
         alert('nome de usuário não encontrado no banco de dados')
     }
-    
-
+    let favoritos = document.querySelector('.favoritos')
+    favoritos.innerHTML=consulta.favoritos
 }

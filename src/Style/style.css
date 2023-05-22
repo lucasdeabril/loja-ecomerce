@@ -98,6 +98,7 @@ ul li input {
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-items: flex-start;
 }
 
 .container {
@@ -390,13 +391,15 @@ ul li input {
     width: 20rem;
     height: -moz-fit-content;
     height: fit-content;
-    transform: translate(-1rem, 0px);
-    align-items: flex-start;
   }
   .slid {
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    flex-direction: row;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    align-items: flex-start;
   }
   .container {
     width: 20rem;
@@ -418,12 +421,12 @@ ul li input {
     height: -moz-fit-content;
     height: fit-content;
     align-items: center;
-    transform: translate(0px, -50rem);
+    min-height: 21rem;
   }
   .favoritos .divfav {
     width: 70%;
     height: 21rem;
-    max-width: 399rem;
+    max-width: 40rem;
     margin-left: 0%;
   }
   .favoritos .divfav img {
@@ -431,7 +434,6 @@ ul li input {
     height: 13rem;
   }
   .carrinho {
-    transform: translate(0px, -50rem);
     width: 20rem;
     height: -moz-fit-content;
     height: fit-content;
@@ -443,19 +445,25 @@ ul li input {
     width: 99%;
   }
   .criarperfil {
-    transform: translate(0rem, -50rem);
     display: flex;
     flex-direction: column;
     width: 20rem;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 20px 0px;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
+    padding: 20px;
+  }
+  .criarperfil .boxlogin {
+    width: 10rem;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .criarperfil .ou {
-    margin: 20px;
+    margin: 10px;
+  }
+  .criarperfil .boxcriar {
+    width: 10rem;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .criarperfil .seuhist {
     width: -moz-fit-content;
@@ -473,10 +481,14 @@ ul li input {
     display: none;
   }
   .historico .itemcar {
-    transform: translate(0rem, 0rem);
-    width: 20rem;
+    transform: translate(-1rem, 0rem);
+    width: 19rem;
     height: -moz-fit-content;
     height: fit-content;
+  }
+  .historico .itemcar .montante {
+    width: 1px;
+    height: 100px;
   }
 }
 .hide {
