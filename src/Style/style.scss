@@ -116,17 +116,43 @@ ul{
 }
 
 .container{
+    
     @include tamanho(70rem, fit-content );
     @include display(flex, column );
     margin-top: 6rem;
-    background-color: $cor-laranja;
+    // background-color: $cor-laranja;
     
+    .anuncio{
+        
+        @include tamanho(100%rem,14rem );
+        @include display(flex,row);
+        background-color: red;
+        overflow: hidden;
+        margin-bottom:1rem;
+        .anunciochild{
+            @include display(flex,row );
+            transition: 1s;
+        }
+        .an{
+            @include tamanho(70rem,100% );
+            
+        }
+    }
     .destaques{
         font-size: 2rem;
-        margin: 3px;
+        margin-top: 20px;
+        padding-left: 1rem;
         color: $cor-branco-mais;
+        background-color: $cor-laranja;
         font-family: 'Bebas Neue', cursive;
     };
+    .subdestaques{
+        padding-top: 2rem;
+        font-size: 2rem;
+        padding-left: 1rem;
+        background-color: $cor-branco-menos;
+        font-family: 'Bebas Neue', cursive;
+    }
     .produtos{
         
         background-color: $cor-branco-menos;
@@ -143,9 +169,9 @@ ul{
         .itens{
             @include display(flex, column );
             justify-content: space-between;
-            margin-left: 1rem;
+            margin-left: 1.4rem;
             margin-top: 0.5rem;
-            max-width: 11rem;
+            width: 12rem;
             height: 19rem;
             
             background-color: $cor-branco-mais;
@@ -255,7 +281,10 @@ ul{
     min-height: 14rem;
     background-color: $cor-branco-menos;
     padding: 1rem;
-    
+        
+        .favoritosP{
+            
+        }
         input{
             @include tamanho(0.7rem,0.7rem )
         }

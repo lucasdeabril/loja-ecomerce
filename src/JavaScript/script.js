@@ -11,6 +11,7 @@ import { validador } from "./perfil.js"
 import { login } from "./perfil.js"
 import { sethist } from "./historico.js"
 import { userfav } from "./userfav.js"
+import { nextimg } from "./banner.js"
 
 
 let indice = 1
@@ -83,3 +84,7 @@ addEventListener('click', (e)=>{
 
     
 })
+
+setInterval(function(){
+    let b = nextimg()
+} ,3000)
