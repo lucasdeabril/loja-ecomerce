@@ -214,11 +214,14 @@ ul{
     
     width: 70rem;
     min-height: 14rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
     background-color:$cor-branco-menos;
     .containeritm{
         position: relative;
         @include display(flex,column );
         margin-top: 1rem;
+        min-height: 6rem;
         background-color: $cor-branco-menos;
         .itemcar{
             margin-top: 0.5rem;
@@ -283,7 +286,8 @@ ul{
     padding: 1rem;
         
         .favoritosP{
-            
+            font-weight: bold;
+            font-size: 1.5rem;
         }
         input{
             @include tamanho(0.7rem,0.7rem )

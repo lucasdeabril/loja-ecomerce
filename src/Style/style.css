@@ -203,6 +203,8 @@ ul li input {
   height: fit-content;
   width: 70rem;
   min-height: 14rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
   background-color: #f6f6f6;
 }
 .carrinho .containeritm {
@@ -210,6 +212,7 @@ ul li input {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
+  min-height: 6rem;
   background-color: #f6f6f6;
 }
 .carrinho .containeritm .itemcar {
@@ -272,6 +275,10 @@ ul li input {
   min-height: 14rem;
   background-color: #f6f6f6;
   padding: 1rem;
+}
+.favoritos .favoritosP {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 .favoritos input {
   width: 0.7rem;
