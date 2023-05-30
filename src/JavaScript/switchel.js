@@ -5,6 +5,7 @@ export function switchel (e) {
     let loja = document.querySelector('.container')
     let perfil = document.querySelector('.criarperfil')
     let slid = document.querySelector('.slid')
+    
     if (e == 1){
        slid.style.marginLeft='0px'
     }

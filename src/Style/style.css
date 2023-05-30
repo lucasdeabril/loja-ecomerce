@@ -438,6 +438,18 @@ ul li input {
     width: 20rem;
     height: -moz-fit-content;
     height: fit-content;
+    margin-top: 0rem;
+  }
+  .container .anuncio {
+    background-color: rgb(0, 96, 177);
+    width: 20rem;
+    height: 14rem;
+  }
+  .container .anuncio .anunciochild .an {
+    scale: 0.99;
+    width: 20rem;
+    height: 14rem;
+    margin-right: 50rem;
   }
   .container .produtos {
     justify-content: center;

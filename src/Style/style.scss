@@ -449,8 +449,19 @@ ul{
     // container
     .container{
         @include tamanho(20rem,fit-content );
-        
-        
+        margin-top: 0rem;
+        .anuncio{
+            background-color: $cor-azul;
+            @include tamanho(20rem,14rem );
+            
+            .anunciochild{
+                .an{
+                    scale: 0.99;
+                    @include tamanho(20rem,14rem );
+                    margin-right: 50rem;
+                }
+            }
+        }
         .produtos{
             justify-content: center;
             .itens{
