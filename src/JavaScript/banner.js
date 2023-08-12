@@ -14,7 +14,7 @@ export function nextimg (){
         position-= 70
         banner.style.marginLeft = `${position}rem`
         counter++
-        console.log(an)
+        // console.log(an)
     }
     
 }

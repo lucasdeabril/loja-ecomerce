@@ -324,13 +324,16 @@
                     <input class="login" type='button' value="login">
                 </div>
                 <div class="ou"><h3>ou</h3></div>
-                <div class="boxcriar">
+                <form id='myform' class="boxcriar">
                     <h2>Crie uma conta</h2>
                     <input id="newuser" type="text" placeholder="Nome de usuário">
+                    <input id="email" type='email' placeholder="email">
                     <input id="senha1" type='password' placeholder="digite uma senha">
                     <input id="senha2" type='password' placeholder="confirme sua senha">
-                    <input class="criarconta" type='button' value="Criar conta">
-                </div>
+                    <input class="criarconta" type='submit' value="Criar conta">
+                </form>
+                
+                <div id="response"></div>
             </div>
                 
             <div class="seuhist hide">

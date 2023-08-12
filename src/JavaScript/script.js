@@ -85,6 +85,32 @@ addEventListener('click', (e)=>{
     
 })
 
+document.querySelector('#myform').addEventListener('submit', () => {
+    event.preventDefault();
+    const form = event.target;
+    const formdata = new FormData(form);
+  
+    const jsondata = {};
+    formdata.forEach((value, key) => {
+      jsondata[key] = value;
+    });
+  
+    const url = `https://nodejs-production-03bf.up.railway.app/usuarios`;
+  
+    fetch(url, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(jsondata)
+    })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('response').textContent = 'Dados enviados com sucesso!';
+    })
+    .catch(error => {
+      document.getElementById('response').textContent = 'Ocorreu um erro ao enviar os dados.';
+    });
+  });
+
 setInterval(function(){
     let b = nextimg()
 } ,3000)
