@@ -89,18 +89,30 @@ document.querySelector('#myform').addEventListener('submit', () => {
     event.preventDefault();
     const form = event.target;
     const formdata = new FormData(form);
-  
+
+    console.log(form)
+    
     const jsondata = {};
     formdata.forEach((value, key) => {
       jsondata[key] = value;
     });
-  
+    
+    console.log(form)
+    
     const url = `https://nodejs-production-03bf.up.railway.app/usuarios`;
   
     fetch(url, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(jsondata)
+      body: {
+	"nome" : "joao3",
+	"email": "joao@exemplo3.com",
+	"senha": 1234,
+	"favoritos": "joao@exemplo3.com",
+	"historico": "joao@exemplo3.com"
+    },
+        mode: 'no-cors' 
+    //   JSON.stringify(jsondata)
     })
     .then(response => response.json())
     .then(data => {
