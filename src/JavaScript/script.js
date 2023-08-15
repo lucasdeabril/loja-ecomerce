@@ -104,14 +104,14 @@ document.querySelector('#myform').addEventListener('submit', () => {
     fetch(url, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: {
-	"nome" : "joao3",
-	"email": "joao@exemplo3.com",
-	"senha": 1234,
-	"favoritos": "joao@exemplo3.com",
-	"historico": "joao@exemplo3.com"
-    },
-        mode: 'no-cors' 
+      body: JSON.stringify({
+        "nome" : "joao3",
+        "email": "joao@exemplo3.com",
+        "senha": 1234,
+        "favoritos": "joao@exemplo3.com",
+        "historico": "joao@exemplo3.com"
+    })
+        
     //   JSON.stringify(jsondata)
     })
     .then(response => response.json())
