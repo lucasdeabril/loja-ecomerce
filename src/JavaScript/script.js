@@ -87,29 +87,20 @@ addEventListener('click', (e)=>{
 
 document.querySelector('#myform').addEventListener('submit', () => {
     event.preventDefault();
-    const form = event.target;
-    const formdata = new FormData(form);
-
-    console.log(form)
-    
-    const jsondata = {};
-    formdata.forEach((value, key) => {
-      jsondata[key] = value;
-    });
-    
-    console.log(form)
-    
+        
     const url = `https://nodejs-production-03bf.up.railway.app/usuarios`;
-  
+    const user = document.querySelector('#newuser')
+    const senha = document.querySelector('#senha1')
+    const email = document.querySelector('#email')
     fetch(url, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        "nome" : "joao3",
-        "email": "joao@exemplo3.com",
-        "senha": 1234,
-        "favoritos": "joao@exemplo3.com",
-        "historico": "joao@exemplo3.com"
+        "nome" : `${user.value}`,
+        "email": `${email.value}`,
+        "senha": `${senha.value}`,
+        "favoritos": "rtx 3090",
+        "historico": "algum"
     })
         
     //   JSON.stringify(jsondata)
