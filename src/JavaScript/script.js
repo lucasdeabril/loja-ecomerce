@@ -85,34 +85,6 @@ addEventListener('click', (e)=>{
     
 })
 
-document.querySelector('#myform').addEventListener('submit', () => {
-    event.preventDefault();
-        
-    const url = `https://nodejs-production-03bf.up.railway.app/usuarios`;
-    const user = document.querySelector('#newuser')
-    const senha = document.querySelector('#senha1')
-    const email = document.querySelector('#email')
-    fetch(url, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        "nome" : `${user.value}`,
-        "email": `${email.value}`,
-        "senha": `${senha.value}`,
-        "favoritos": "rtx 3090",
-        "historico": "algum"
-    })
-        
-    //   JSON.stringify(jsondata)
-    })
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('response').textContent = 'Dados enviados com sucesso!';
-    })
-    .catch(error => {
-      document.getElementById('response').textContent = 'Ocorreu um erro ao enviar os dados.';
-    });
-  });
 
 setInterval(function(){
     let b = nextimg()
