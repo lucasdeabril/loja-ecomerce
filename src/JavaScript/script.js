@@ -32,9 +32,10 @@ addEventListener('click', (e)=>{
             if(targetEl.classList.contains('checado')){
                 console.log('checado')
                 let F = favoritar(targetEl)
+                let filtro_fav = filtrofav(targetEl,indice)
+                
                 let u = userfav()
 
-                let filtro_fav = filtrofav(targetEl,indice)
             }else{
                 let removeitm = remove(targetEl,indice)
             } 

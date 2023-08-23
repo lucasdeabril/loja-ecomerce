@@ -9,7 +9,7 @@ let registredpasword = document.querySelector('.registredpasword')
 let perfilinicio = document.querySelector('#perfilinicio')
 
 
-let userplace = ''
+let userid = ''
 
 export function validador(){
     event.preventDefault();
@@ -87,11 +87,12 @@ export function login(){
             alert('Usuário ou senha incorretos')
         }
         
-        // favoritos.innerHTML=consulta.favoritos
+        userid = data.id
+        
     })
     .catch(error => {
         console.error('Ocorreu um erro:', error);
     });
-
-    
+        
 }
+export default userid;
