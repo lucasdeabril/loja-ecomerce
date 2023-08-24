@@ -8,8 +8,8 @@ let registredpasword = document.querySelector('.registredpasword')
 
 let perfilinicio = document.querySelector('#perfilinicio')
 
+const userid = document.querySelector('#response')
 
-let userid = ''
 
 export function validador(){
     event.preventDefault();
@@ -86,8 +86,10 @@ export function login(){
         }else{
             alert('Usuário ou senha incorretos')
         }
-        
-        userid = data.id
+        const favoritos = document.querySelector('.favoritos');
+        favoritos.innerHTML = data.favoritos
+        userid.innerHTML = data.id
+        console.log(userid.innerHTML)
         
     })
     .catch(error => {
@@ -95,4 +97,3 @@ export function login(){
     });
         
 }
-export default userid;
