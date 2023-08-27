@@ -1,6 +1,6 @@
 
 // essa função impede o usuário de repetir o item nos favoritos
-export function filtrofav(e , i){
+export async function filtrofav(e , i){
     let parentEl = e.closest('div');
     let divfav = document.querySelectorAll('.divfav')
     

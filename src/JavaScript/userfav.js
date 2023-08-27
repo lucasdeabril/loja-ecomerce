@@ -1,7 +1,7 @@
 // código responsável por salvar o favoritos no perfil do usuário
 
 
-export function userfav() {
+export async function userfav() {
     const userid = document.querySelector('#response').textContent; // Use .textContent para obter o conteúdo
     const favoritos = document.querySelector('.favoritos');
     let url = `https://nodejs-production-03bf.up.railway.app/usuarios/${userid}/favoritos`;

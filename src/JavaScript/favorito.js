@@ -1,6 +1,6 @@
 
 
-export function favoritar(e){
+export async function favoritar(e){
 
     // let x = document.querySelector('#placa')
     // console.log(x)

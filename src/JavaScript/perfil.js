@@ -90,7 +90,12 @@ export function login(){
         favoritos.innerHTML = data.favoritos
         userid.innerHTML = data.id
         console.log(userid.innerHTML)
-        
+        const seuhist = document.querySelector('.seuhist')//representa o historico de compra
+        const historico = document.querySelector('.historico')
+        const loghide = document.querySelector('.loghide')//representa o campo de login
+        seuhist.classList.toggle('hide')
+        historico.innerHTML = data.historico
+        loghide.classList.toggle('hide')
     })
     .catch(error => {
         console.error('Ocorreu um erro:', error);
